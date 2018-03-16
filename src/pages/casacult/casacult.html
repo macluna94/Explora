@@ -1,0 +1,53 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+      {{ dataitem.title }}
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+ 
+<ion-content padding>
+
+<ion-card *ngFor="let items of fog"  (click)="paragon(items)"  >
+  <ion-card-header>
+    {{ items.title }}
+  </ion-card-header>
+  <img src="assets/imgs/{{ items.img }}">
+    <ion-card-content>
+    {{ items.description }}
+  </ion-card-content>
+  <ion-row>
+
+  <ion-col center text-center>
+    <button ion-button icon-right small>
+      <div>
+        13 comentarios
+      </div>
+      <ion-icon name="text"></ion-icon>
+    </button>
+  </ion-col>
+
+  <ion-col center text-center>
+    <ion-note>
+      <ion-icon name="time"></ion-icon>
+      11:53 pm
+    </ion-note>
+  </ion-col>
+</ion-row>
+   
+      <button ion-button icon-left color="favorite"  round block>
+        <ion-icon name="star-outline"></ion-icon>
+        <div>
+          3 favoritos
+        </div>
+      </button>
+
+</ion-card>
+
+
+
+
+</ion-content>

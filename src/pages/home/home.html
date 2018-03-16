@@ -1,17 +1,53 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title  text-center  >Inicio</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+<img src="assets/imgs/icon_app_home.png" height="40%" padding-left margin >
+
+
+
+<p text-justify >
+  Esta es una aplicacion para explorar el lugar en el que vives.
+  Visita los lugares mas importantes que forman parte de tu ciudad
+  Aprende sobre tu ciudad y hazla parte de ti de una forma interactiva
+</p>
+
+<p>
+  Explora es la app que te ayudara
+</p>
+
+
+
+  <ion-item text-center   >
+    QR DATA
+  </ion-item>
+
+
+  <button ion-button full icon-left  color="danger"  (click)="scancode()">
+    <ion-icon name="qr-scanner"></ion-icon>Scan Codigo
+  </button>
+ 
+  
+  <ion-card *ngIf="scannedcode">
+    <ion-card-content>
+      Result from Scan: {{ scannedcode }}
+    </ion-card-content>
+  </ion-card>
+
+
+<br>
+<br>
+
+
+<div center >
+
+  <button ion-button (click)="alerta()"  >Click</button>
+</div>
+
+
+  
 </ion-content>

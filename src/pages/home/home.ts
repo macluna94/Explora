@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController, ToastController } from 'ionic-angular';
 import { Jsn1Provider  } from '../../providers/jsn1/jsn1';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
-
-import { AlertController } from 'ionic-angular';
-
 
 
 @Component({
@@ -17,14 +14,14 @@ export class HomePage {
   createdcode = null;
   scannedcode = null;
 
-  constructor(public navCtrl: NavController,public proveedor:Jsn1Provider, private barcode: BarcodeScanner, public alertas: AlertController) {}
+  constructor(public navCtrl: NavController,public proveedor:Jsn1Provider, private barcode: BarcodeScanner, public alertas: AlertController,public tostaCtrl: ToastController) {}
  
 
  
 scancode(){
   this.barcode.scan().then(barcodeData => {
     this.scannedcode = barcodeData.text;
-
+    this.tostada();
   }, (err) =>{
     console.log("error", err);
   }
@@ -46,7 +43,14 @@ alerta(){
   console.log("1a Alerta");
 }
 
-
+tostada(){
+  let tost= this.tostaCtrl.create({
+    message: "Tostada Escanneada",
+    duration: 3000,
+    position: 'top'
+  });
+  tost.present();
+}
 
 
 }

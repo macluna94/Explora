@@ -8,11 +8,20 @@
 
 <ion-content>
   <ion-list>
+
+
+
+
+
     <ion-list-header>Lista de amigos </ion-list-header>
     <ion-item *ngFor="let usuario of usuarios">
-      <ion-icon name="contact" item-start></ion-icon>
-      <b>Nombre:</b> {{usuario.name}}
-      <br> Email: {{ usuario.email }}
+<ion-avatar item-start >
+  <img src="assets/imgs/perfile.jpg">
+</ion-avatar>
+      <h2>
+        {{usuario.name}}
+      </h2>
+      <p> Email: {{ usuario.email }} </p>
     </ion-item>
   </ion-list>
 

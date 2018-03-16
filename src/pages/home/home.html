@@ -31,10 +31,15 @@
     <ion-icon name="qr-scanner"></ion-icon>Scan Codigo
   </button>
  
-  
+  <div *ngIf="scannedcode">
+    <img src="assets/imgs/logo.png">
+  </div>
+
   <ion-card *ngIf="scannedcode">
     <ion-card-content>
-      Result from Scan: {{ scannedcode }}
+      <h1 text-center>
+        {{ scannedcode }}
+      </h1>
     </ion-card-content>
   </ion-card>
 
@@ -47,6 +52,7 @@
 
   <button ion-button (click)="alerta()"  >Click</button>
 </div>
+
 
 
   

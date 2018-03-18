@@ -21,6 +21,22 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //import { Proveedor1Provider } from '../providers/proveedor1/proveedor1';
 import { HttpClientModule } from '@angular/common/http';
 import { Jsn1Provider } from '../providers/jsn1/jsn1';
+import { AuthProvider } from '../providers/auth/auth';
+import { LoginPage } from '../pages/login/login';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyCG1D6OvbMADRn7-TN2TB7Ifleo3h9lxdA",
+  authDomain: "explora-test-080494.firebaseapp.com",
+  databaseURL: "https://explora-test-080494.firebaseio.com",
+  projectId: "explora-test-080494",
+  storageBucket: "explora-test-080494.appspot.com",
+  messagingSenderId: "638027801575"
+};
+
 
 @NgModule({
   declarations: [
@@ -31,13 +47,17 @@ import { Jsn1Provider } from '../providers/jsn1/jsn1';
     TabsPage,
     CasacultPage,
     QrPage,
-    PageCultPage
+    PageCultPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
-    NgxQRCodeModule
+    NgxQRCodeModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -48,7 +68,8 @@ import { Jsn1Provider } from '../providers/jsn1/jsn1';
     TabsPage,
     CasacultPage,
     QrPage,
-    PageCultPage
+    PageCultPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
@@ -56,7 +77,8 @@ import { Jsn1Provider } from '../providers/jsn1/jsn1';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Jsn1Provider,
     BarcodeScanner,
-    NgxQRCodeModule
+    NgxQRCodeModule,
+    AuthProvider
   ]
 })
 export class AppModule {}

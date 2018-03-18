@@ -3,6 +3,7 @@ import { NavController, AlertController, ToastController } from 'ionic-angular';
 import { Jsn1Provider  } from '../../providers/jsn1/jsn1';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
+import { AuthProvider } from '../../providers/auth/auth';
 
 @Component({
   selector: 'page-home',
@@ -14,7 +15,7 @@ export class HomePage {
   createdcode = null;
   scannedcode = null;
 
-  constructor(public navCtrl: NavController,public proveedor:Jsn1Provider, private barcode: BarcodeScanner, public alertas: AlertController,public tostaCtrl: ToastController) {}
+  constructor(public auth: AuthProvider,public navCtrl: NavController,public proveedor:Jsn1Provider, private barcode: BarcodeScanner, public alertas: AlertController,public tostaCtrl: ToastController) {}
  
 
  
@@ -52,5 +53,8 @@ tostada(){
   tost.present();
 }
 
+  cerrarSesion() {
+    this.auth.logout();
+  }
 
 }

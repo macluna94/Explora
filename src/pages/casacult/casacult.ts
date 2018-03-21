@@ -15,7 +15,7 @@ export class CasacultPage {
   //dog = [null];
 
 
-
+ 
   cult = [];
   ecol = [];
   arqui = [];

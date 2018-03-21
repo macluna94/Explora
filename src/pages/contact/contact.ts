@@ -12,6 +12,8 @@ export class ContactPage {
 usuarios
 
 
+item;
+
   constructor(public navCtrl: NavController, public proveedor: Jsn1Provider) {
 
   }

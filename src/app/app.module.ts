@@ -28,6 +28,9 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
+//Modal
+import { ModalPage } from "../pages/modal/modal";
+
 export const firebaseConfig = {
   apiKey: "AIzaSyCG1D6OvbMADRn7-TN2TB7Ifleo3h9lxdA",
   authDomain: "explora-test-080494.firebaseapp.com",
@@ -48,7 +51,8 @@ export const firebaseConfig = {
     CasacultPage,
     QrPage,
     PageCultPage,
-    LoginPage
+    LoginPage,
+    ModalPage
   ],
   imports: [
     BrowserModule,
@@ -69,7 +73,8 @@ export const firebaseConfig = {
     CasacultPage,
     QrPage,
     PageCultPage,
-    LoginPage
+    LoginPage,
+    ModalPage
   ],
   providers: [
     StatusBar,

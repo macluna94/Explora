@@ -7,6 +7,8 @@
 *.tmp
 *.tmp.*
 log.txt
+*.rar
+
 *.sublime-project
 *.sublime-workspace
 .vscode/

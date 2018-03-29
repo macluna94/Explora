@@ -22,14 +22,15 @@
   </ion-list>
 -->
 
+<button ion-button block (click)="recarga()" >Refresh</button>
 
-<ion-card>
+<ion-card *ngIf="items" >
   <ion-card-header>
-    titulo
+    {{ items.title  }}
   </ion-card-header>
-  <img src="../../assets/imgs/dino.jpg" height="50%">
+  <img src="../../assets/imgs/{{ items.img }}.jpg" height="50%">
   <ion-card-content>
-Contenido 
+    {{ items.description }}
   </ion-card-content>
 
 </ion-card>

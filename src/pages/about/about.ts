@@ -42,7 +42,7 @@ backdata = [];
        'img': 'iglesia_back.jpg'
       }
     ]
-  }
+  }  
 
 btncultura(dataitem){
   this.navCtrl.push(CasacultPage,{ dataitem: dataitem });

@@ -10,6 +10,7 @@ import { AuthProvider } from '../../providers/auth/auth';
 import { ModalController, ViewController, NavParams  } from "ionic-angular";
 import { ModalPage } from "../modal/modal";
 
+import { ContactPage } from "../contact/contact";
 
 
 @Component({
@@ -30,6 +31,7 @@ export class HomePage {
 xc = [];
 
 
+resultado;
 
   xcode = '';
   list = [];
@@ -135,8 +137,9 @@ items = null;
 
   }
 
-  escape(fruta) {
-    return fruta.id === 'dinos';
+  extra(items) {
+    this.navCtrl.push(ContactPage, { items: items });
+
   }
 
 find(){
@@ -149,7 +152,20 @@ find(){
     this.presentModal(this.list[this.item]);
   }
 */
-console.log( this.xc.find(this.escape)  );
+
+this.resultado = this.xc.find(fruta => fruta.id === this.xcode.toLowerCase()) ;
+
+if (this.resultado != null) {
+  console.log(this.resultado);
+  this.extra(this.resultado);
+  
+}
+else{
+  console.log("Dato no encontrado");
+}
+
+
+
 }
 
 

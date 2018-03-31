@@ -3,7 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { Jsn1Provider } from '../../providers/jsn1/jsn1';
 
-import { HomePage } from "../home/home";
+
 
 @Component({
   selector: 'page-contact',
@@ -23,17 +23,9 @@ items;
     public proveedor: Jsn1Provider,
     public params: NavParams
   ) {
-    this.items = params.data.items; 
-  
-    this.go.push(this.items);
-
-
-    console.log(this.go);
+ 
   }
 
-recarga(){
-  console.log(this.go);
-}
 
   ionViewDidLoad() {
     this.proveedor.getData()

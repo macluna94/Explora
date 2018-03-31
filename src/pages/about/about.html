@@ -1,15 +1,24 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title  text-center>
-      Info-Track
-    </ion-title>
-  </ion-navbar>
+  <ion-toolbar color="danger" >
+
+    <ion-buttons start>
+      <button ion-button icon-only right  color="royal" (click)="scancode()" >
+      Escanner
+        <ion-icon name="barcode"></ion-icon>
+      </button>
+    </ion-buttons>
+      <ion-title>TRACKER</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content class="card-background-page" >
 
-  <ion-card *ngFor="let dataitem of backdata" (click)="btncultura(dataitem)">
-    
+<div *ngIf="i == true"  >
+  <h2>Data: {{  scannedcode }}   </h2>
+</div>
+
+
+  <ion-card *ngFor="let dataitem of mainblock" (click)="btncultura(dataitem)">
     <img src="assets/imgs/{{ dataitem.img }}" />
     <div class="card-title"> {{ dataitem.title }}</div>
     <div class="card-subtitle"> {{ dataitem.description }} </div>

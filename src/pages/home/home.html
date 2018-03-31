@@ -5,28 +5,8 @@
 </ion-header>
 
 <ion-content padding>
-<!--
-<img src="assets/imgs/icon_app_home.png" height="40%" padding-left margin >
--->
 
-
-<p text-justify >
-  Esta es una aplicacion para explorar el lugar en el que vives.
-  Visita los lugares mas importantes que forman parte de tu ciudad
-  Aprende sobre tu ciudad y hazla parte de ti de una forma interactiva
-</p>
-
-<p>
-  Explora es la app que te ayudara
-</p>
-
-
-
-  <ion-item text-center   >
-    QR DATA
-  </ion-item>
-
-
+  <!--
   <button ion-button full icon-left  color="danger"  (click)="scancode()">
     <ion-icon name="qr-scanner"></ion-icon>Scan Codigo
   </button>
@@ -42,50 +22,15 @@
       </h1>
     </ion-card-content>
   </ion-card>
-
-
-<br>
-<br>
-
-<div center >
-  
-  <button ion-button (click)="alerta()"  >Click</button>
-</div>
-<!--
-  <button ion-button block (click)="cerrarSesion()">Cerrar Sesión</button>
-
-  <ion-card *ngIf="anime">
-    <ion-card-content>
-      <h1 text-center>
-        {{ anime }}
-      </h1>
-    </ion-card-content>
-  </ion-card>
 -->
 
 
 
-<br><br>
-<ion-list>
-  <ion-item>
-    <ion-label>Busqueda</ion-label>
-    <ion-input type="text" [(ngModel)]="xcode"  ></ion-input>
-  </ion-item>
-</ion-list>
-<button ion-button block color="secondary"  (click)="find()"  >Busqueda</button>
+<div center >
+  <button ion-button (click)="alerta()"  >Click</button>
+</div>
 
-
-
-
-<ion-card *ngIf="item >= 0"  >
-<ion-card-content>
-  {{ list[item] }}
-</ion-card-content>
-
-</ion-card>
-
-
-<button ion-button (click)="presentModal(list[item])">Modal</button>
+  <button ion-button block (click)="cerrarSesion()">Cerrar Sesión</button>
 
 
 </ion-content>

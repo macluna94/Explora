@@ -10,8 +10,8 @@ import { QrPage } from '../qr/qr';
 })
 export class TabsPage {
 
-  tab1Root = AboutPage;
-  tab2Root = HomePage;
+  tab1Root = HomePage ;
+  tab2Root = AboutPage;
   tab3Root = ContactPage;
   tab4Root = QrPage;
 

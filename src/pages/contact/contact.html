@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <!--
+  
   <ion-list>
   <ion-list-header>Lista de amigos </ion-list-header>
   <ion-item *ngFor="let usuario of usuarios">
@@ -20,20 +20,6 @@
   <p> Email: {{ usuario.email }} </p>
   </ion-item>
   </ion-list>
--->
-
-<button ion-button block (click)="recarga()" >Refresh</button>
-
-<ion-card *ngIf="items" >
-  <ion-card-header>
-    {{ items.title  }}
-  </ion-card-header>
-  <img src="../../assets/imgs/{{ items.img }}.jpg" height="50%">
-  <ion-card-content>
-    {{ items.description }}
-  </ion-card-content>
-
-</ion-card>
 
 
 

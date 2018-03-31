@@ -1,59 +1,48 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>login</ion-title>
+    <ion-title text-center>
+      <strong>Explora</strong>
+      <br>
+      Login
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
+
+<div text-center>
+  <img src="assets/imgs/icon_app_home.png" height="150px" >
+</div>
+
+<p text-justify>
+  Visita los lugares mas importantes que forman parte de tu
+  ciudad Aprende sobre tu ciudad y hazla parte de ti de una forma interactiva
+<br/>
+<br/>
+  Explora es la app que te ayudara
+</p>
+
 <ion-list>
     <form>
       <ion-item>
         <ion-label floating>Email</ion-label>
-        <ion-input
-          [(ngModel)]="user.email"
-          name="email"
-          type="text"
-          autocapitalize="off"
-          required
-        >
+        <ion-input [(ngModel)]="user.email" name="email" type="text" autocapitalize="off" required >
         </ion-input>
       </ion-item>
-
       <ion-item>
         <ion-label floating>Contraseña</ion-label>
-        <ion-input
-          [(ngModel)]="user.password"
-          name="password"
-          type="password"
-          required
-        >
+        <ion-input [(ngModel)]="user.password" name="password" type="password" required>
         </ion-input>
       </ion-item>
       <div padding>
-        <button
-            ion-button 
-            (click)="login()"
-            type="submit"
-            color="primary"
-            block
-        >
+        <button ion-button  (click)="login()" type="submit" color="primary" block>
           Login
         </button>
-
-        <button
-          ion-button 
-          (click)="signin()"
-          type="submit"
-          color="secondary"
-          block
-        >
-          Dar de alta
+        <br>
+        <button ion-button  (click)="signin()" type="submit" color="secondary" block>
+          REGISTRASE
         </button>
       </div>
     </form>
   </ion-list>
 </ion-content>
-

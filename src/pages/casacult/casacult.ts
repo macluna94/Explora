@@ -135,19 +135,19 @@ export class CasacultPage {
     this.ecol = [
       {
         'id': '1',
-        'titile': 'Villa Lobos',
+        'title': 'Villa Lobos',
         'description': '',
         'img': '1.png'
       },
       {
         'id': '2',
-        'titile': 'Rio Jaloco',
+        'title': 'Rio Jaloco',
         'description': '',
         'img': '2.png'
       },
       {
         'id': '3',
-        'titile': 'Campanario',
+        'title': 'Santo Santiago',
         'description': '',
         'img': '3.png'
       }
@@ -166,14 +166,14 @@ else if (this.dataitem.array == 'arqui') {
   this.fog = this.arqui;
 
 }
+else if (this.dataitem.array == 'ecol') {
+  console.log("ECOLOGIA");
+  this.fog = this.ecol;
+
+}
 else if (this.dataitem.array == 'igle') {
   console.log("IGLESIAS");
   this.fog = this.igle;
-
-}
-else if (this.dataitem.array == 'ecol') {
-  console.log("IGLESIAS");
-  this.fog = this.ecol;
 
 }
 else {

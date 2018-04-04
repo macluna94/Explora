@@ -40,32 +40,39 @@ export class AboutPage {
   {
         this.mainblock = [
           {
-            'id':'1',
-            'array': 'cult',
-            'title': 'Cultura',
-            'description': '3 ubicaciones',
-            'img': 'cultura.jpg'
+            'id': '1',
+            'array': 'rut',
+            'title': 'Rutas',
+            'description': '12 ubicaciones',
+            'img': 'rutas.png'
           },
           {
             'id': '2',
-            'array': 'ecol',
-            'title': 'Ecologia',
-            'description': '3 ubicaciones',
-            'img': 'sierra_back.jpg'
+            'array': 'festi',
+            'title': 'Festivales',
+            'description': '3 Festivales',
+            'img': 'festivales.jpg'
           },
           {
             'id': '3',
-            'array': 'arqui',
-            'title': 'Arquitectura',
-            'description': '5 ubicaciones',
-            'img': 'arqui.jpg'
+            'array': 'natura',
+            'title': 'Areas Naturales',
+            'description': '5 ubicaciones' ,
+            'img': 'sierra_back.jpg'
           },
           {
-            'id': '4',
-            'array': 'igle',
-          'title': 'Iglesias',
-          'description': '8 ubicaciones' ,
-          'img': 'iglesia_back.jpg'
+            id: '4',
+            array: 'magicos',
+            title: 'Pueblos Magicos',
+            description: '5 ubicaciones',
+            img: 'magicos.jpg'
+          },
+          {
+            id: '5',
+            array: 'arqueo',
+            title: 'Arqueologia',
+            description: '4 ubicaciones',
+            img: 'arqueologia.jpg'
           }
         ]
 

@@ -20,8 +20,7 @@ export class HomePage {
 
 
 resultado;
-
-  item;
+item;
 items = null;
   constructor(
     public auth: AuthProvider,
@@ -51,5 +50,7 @@ items = null;
     let modal = this.modales.create(ModalPage, { item: item } );
     modal.present();
   }
+
+
 
 }
